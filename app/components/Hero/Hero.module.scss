@@ -1,0 +1,79 @@
+.content{
+    margin: 5rem;
+    .header{
+        font-size: 5rem;
+        font-weight: 500;
+        display: block;
+        width: 50%;
+        color: #fff;
+        margin: 0 auto;
+        text-align: center;
+        .specialTxt{
+            color: rgb(171, 173, 179);
+        }
+    }
+
+    .text{
+        color: rgb(171, 173, 179);
+        font-size: 1.5rem;
+        font-weight: 200;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .graphic{
+        min-height: 35vh;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background: url("/earth.jpg");
+        background-size: cover;
+    }
+
+}
+@media(max-width:1200px) {
+    .content{
+        .header{
+            font-size: 4rem;
+            width: 70%;
+        }  
+        .text{
+            font-size: 1.25rem;
+            width: 70%;
+        }
+    }
+    
+}
+@media(max-width:600px) {
+    .content{
+        margin: 5rem 3rem;
+        .header{
+            font-size: 3rem;
+            width: 70%;
+        }  
+        .text{
+            font-size: 1rem;
+            width: 70%;
+        }
+        .graphic{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:400px) {
+    .content{
+        margin: 5rem 1rem;
+        .header{
+            font-size: 2rem;
+            width: 100%;
+        }  
+        .text{
+            font-size: 1rem;
+            width: 100%;
+        }
+        .graphic{
+            width: 100%;
+        }
+    }
+}
