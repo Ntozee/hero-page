@@ -1,0 +1,40 @@
+$item-height: 30px;
+$item-width: 200px;
+.flipCardContent {
+    position: relative;
+    margin-top: 1px;
+    margin-left: 3px;
+    width: $item-width;
+    height: $item-height;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    .flipCardFront,
+    .flipCardBack {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      backface-visibility: hidden;
+      transform-origin: 50% 50% 0px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .flipCardFront {
+      transform: rotateY(0deg) translateZ(#{$item-height / 2});
+      z-index: 1;
+    }
+    .flipCardBack {
+      transform: rotateX(90deg) translateZ(#{$item-height / 2});
+    }
+
+    &.flipped {
+      .flipCardFront {
+        transform: rotateX(-90deg) translateZ(#{$item-height / 2});
+      }
+      .flipCardBack {
+        display: block;
+        transform: rotateY(0deg) translateZ(#{$item-height / 2});
+        z-index: 1;
+      }
+    }
+  }

@@ -1,12 +1,15 @@
 .content{
-    margin: 5rem;
+    padding: 5rem;
+    height: 100vh;
     .header{
         font-size: 5rem;
         font-weight: 500;
         display: block;
         width: 50%;
+        max-width: 600px;
         color: #fff;
         margin: 0 auto;
+        margin-top: 5rem;
         text-align: center;
         .specialTxt{
             color: rgb(171, 173, 179);
@@ -21,7 +24,9 @@
         width: 50%;
         margin: 0 auto;
         text-align: center;
+        animation-delay: 0.2s;
     }
+
     .graphic{
         min-height: 35vh;
         display: block;
@@ -29,6 +34,7 @@
         margin: 0 auto;
         background: url("/earth.jpg");
         background-size: cover;
+        animation-delay: 0.4s;
     }
 
 }
@@ -47,10 +53,11 @@
 }
 @media(max-width:600px) {
     .content{
-        margin: 5rem 3rem;
+        padding: 0;
+        margin: 5rem 0rem;
         .header{
             font-size: 3rem;
-            width: 70%;
+            width: 100%;
         }  
         .text{
             font-size: 1rem;
@@ -76,4 +83,14 @@
             width: 100%;
         }
     }
+}
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

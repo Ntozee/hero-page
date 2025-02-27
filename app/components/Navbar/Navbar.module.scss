@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color:rgb(10, 12, 17);
     .brand{
         display: flex;
         flex-direction: column;
@@ -20,7 +26,7 @@
         .description{
             font-size: 0.75rem;
             font-weight: 300;
-            color: rgb(171, 173, 179);
+            color: rgb(191, 193, 199);
             line-height: 21px;
             flex: 1;
             width: 20vw;
@@ -36,14 +42,22 @@
         .link{
             margin-right: 1rem;
             padding-top: 1rem;
-        }
-        .link:hover{
             transition: all 0.5s ease;
-            color: rgb(34, 146, 177);
+            &:hover{
+                color: rgb(34, 146, 177);
+                scale: 1.05;
+            }
         }
         .dropdown{
             border-top: solid 1px rgb(50, 52, 56);
             padding-top: 1rem;
+            .link{
+                transition: all 0.5s ease;
+                &:hover{
+                    color: rgb(34, 146, 177);
+                    scale: 1.05;
+                }
+            }
             .icon{
                 font-size: 0.75rem;
                 align-items: center;  
@@ -65,14 +79,23 @@
         color: rgb(255, 255, 255);
         // width: 8vw;
         .link{
-            padding: 5px 10px;
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.25rem;
+            transition: all 0.5s ease;
+            svg{
+                transition: all 0.5s ease;
+            }
         }
         .link:hover{
-            transition: all 0.5s ease;
             background-color: #323438;
-            
+            svg{
+                scale: 1.2;
+            }
         }
     }
     
