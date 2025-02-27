@@ -20,20 +20,20 @@ $item-width: 200px;
     }
 
     .flipCardFront {
-      transform: rotateY(0deg) translateZ(#{$item-height / 2});
+      transform: rotateY(0deg) translateZ(#{calc($item-height / 2)});
       z-index: 1;
     }
     .flipCardBack {
-      transform: rotateX(90deg) translateZ(#{$item-height / 2});
+      transform: rotateX(90deg) translateZ(#{calc($item-height / 2)});
     }
 
     &.flipped {
       .flipCardFront {
-        transform: rotateX(-90deg) translateZ(#{$item-height / 2});
+        transform: rotateX(-90deg) translateZ(#{calc($item-height / 2)});
       }
       .flipCardBack {
         display: block;
-        transform: rotateY(0deg) translateZ(#{$item-height / 2});
+        transform: rotateY(0deg) translateZ(#{calc($item-height / 2)});
         z-index: 1;
       }
     }
