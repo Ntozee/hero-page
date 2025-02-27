@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import navbar from "./Navbar.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,18 +16,22 @@ const Navbar = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <div className={navbar.parent}>
-      <div className={navbar.brand} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
-        <FlipCard 
-          isFlipped={isFlipped} 
+      <div
+        className={navbar.brand}
+        onMouseEnter={() => setIsFlipped(true)}
+        onMouseLeave={() => setIsFlipped(false)}
+      >
+        <FlipCard
+          isFlipped={isFlipped}
           front={
             <Link className={navbar.logo} href="/">
               MyLogo
             </Link>
-          } 
+          }
           back={
             <div className={navbar.description}>
-              Welcome to my hero page where I show you some of my front-end skills
-              with a minimalistic design.
+              Welcome to my hero page where I show you some of my front-end
+              skills with a minimalistic design.
             </div>
           }
         />
