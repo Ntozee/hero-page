@@ -1,14 +1,12 @@
-import Link from "next/link";
 import React from "react";
 import hero from "./Hero.module.scss";
 import Button from "../Button/Button";
-import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className={hero.content}>
       <span className={hero.header}>
-        Let's <span className={hero.specialTxt}>create</span> digital
+        Let&apos;s <span className={hero.specialTxt}>create</span> digital
         experiences.
       </span>
       <div className={hero.text}>
